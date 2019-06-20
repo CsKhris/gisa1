@@ -147,7 +147,37 @@
 		}
 		
 		//폼의 데이터 전송
-		document.getElementById("registerform").submit();
+		//document.getElementById("registerform").submit();
+	
+		//폼의 데이터를 가지고 insert.jsp 파일에 ajax 요청
+		//ajax 객체 생성
+		var request = new XMLHttpRequest();
+		
+		//전송할 URL을 생성
+		var url = "insert.jsp?"
+		//URL에 파라미터 붙이기
+		url += "custno=" + 
+			document.getElementById("custno").value;
+		url += "&custname=" + n.value;
+		url += "&phone=" + p.value;
+		url += "&address=" + a.value;
+		url += "&joindate=" + j.value;
+		url += "&grade=" + g.value;
+		url += "&city=" + c.value;
+		
+		//ajax 요청을 생성
+		request.open('GET', encodeURI(url));
+		request.send('');
+		
+		//요청에 성공했을 때 수행할 내용 작성
+		request.onreadystatechange = function(){
+			if(request.readyState == 4){
+				alert("회원등록이 완료되었습니다!")
+			}
+		}
+		
+		
+		
 	});
 </script>
 </html>
