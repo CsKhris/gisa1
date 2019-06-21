@@ -105,7 +105,13 @@
 	</form>
 </body>
 <script>
-	//등록버튼을 클릭하면
+	//조회버튼을 클릭하면 
+	document.getElementById("searchbtn")
+		.addEventListener("click", function(e){
+		//페이지 이동
+		location.href = "list.jsp";
+	});
+	
 	document.getElementById("registerbtn")
 		.addEventListener("click", function(e){
 			//회원성명 입력란을 찾아오기
@@ -165,6 +171,7 @@
 		url += "&grade=" + g.value;
 		url += "&city=" + c.value;
 		
+		alert(url)
 		//ajax 요청을 생성
 		request.open('GET', encodeURI(url));
 		request.send('');
