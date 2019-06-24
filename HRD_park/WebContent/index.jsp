@@ -11,7 +11,7 @@
 	<nav>
 		<a href="register.jsp" target="content">회원등록</a>&nbsp;&nbsp;
 		<a href="list.jsp" target="content">회원목록조회/수정</a>&nbsp;&nbsp;
-		<a href="" target="content">회원매출조회</a>&nbsp;&nbsp;
+		<a href="summary.jsp" target="content">회원매출조회</a>&nbsp;&nbsp;
 		<a href="main.jsp" target="content">홈으로</a>
 	</nav>
 	<section>
